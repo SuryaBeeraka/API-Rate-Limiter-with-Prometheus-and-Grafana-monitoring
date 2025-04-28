@@ -2,6 +2,7 @@
 
 🚀 This project implements a scalable API Rate Limiter using Node.js and Redis, monitored in real-time using Prometheus and Grafana dashboards, and deployed with Kubernetes.
 
+API Rate Limiter with Prometheus and Grafana Monitoring is a cloud-native backend system designed to control client request rates and ensure system stability. The project uses Node.js and Redis to implement fast, scalable rate limiting, while Prometheus and Grafana provide real-time monitoring and visualization. The entire system is containerized with Docker and orchestrated using Kubernetes, simulating a production-grade deployment setup.
 ---
 
 ## 🔥 Tech Stack
