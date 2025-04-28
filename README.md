@@ -57,7 +57,13 @@ kubectl apply -f k8s/prometheus/prometheus-deployment.yaml
 kubectl apply -f k8s/grafana/grafana-deployment.yaml
 kubectl apply -f k8s/api-deployment.yaml
 
-5. Access Services:
+5. Run these commands in different terminarls:
+kubectl port-forward service/api-service 3000:3000
+kubectl port-forward service/prometheus-service 30090:9090
+kubectl port-forward service/grafana-service 3001:3000
+minikube tunnel
+
+6. Access Services:
 API
 http://localhost:3000/api/data
 Prometheus
@@ -66,7 +72,15 @@ Grafana
 http://localhost:3001 (Login: admin/admin)
 
 Below are the ScreenShots of my project:
+### API Response
+![API Access Screenshot](screenshots/api_access.png)
 
-![image](https://github.com/user-attachments/assets/46fff65c-4ba8-45b8-8261-5334cc004904)
+### Prometheus Targets Health
+![Prometheus Screenshot](screenshots/prometheus_target.png)
+
+### Grafana API Traffic Dashboard
+![Grafana Dashboard Screenshot](screenshots/grafana_dashboard.png)
+
+
 
 
